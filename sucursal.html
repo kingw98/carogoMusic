@@ -75,10 +75,11 @@
 			<h1 id="fh5co-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li><a href="sucursal.html">sucursal</a></li>
-					<li class="fh5co-active"><a href="Personal.html">Personal</a></li>
+					<li class="fh5co-active"><a href="sucursal.html">sucursal</a></li>
+					<li><a href="Personal.html">Personal</a></li>
 					<li><a href="discos.html">discos</a></li>
 					<li><a href="compañia.html">Compañia de discos</a></li>
+					<li><a href="consultas.html">consultas</a></li>
 				</ul>
 			</nav>
 
@@ -94,6 +95,7 @@
 				
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Sucursal</span></h2>
 				<center>
+					<h2>Ingresar sucursal</h2>
 						<form action="./recibeSucursal.php" method="POST">
 							<table>
 								<tr>
@@ -115,8 +117,9 @@
 							</table>
 						</form>
 				</center>
-				
+				<hr>
 				<center>
+					<h2>Mostrar sucursal</h2>
 						<form action="./mostrarSucursal.php" method="POST">
 							<table>
 								<tr>
@@ -124,8 +127,50 @@
 								</tr>
 							</table>
 						</form>
-                </center>
-
+				<hr>
+				<h2>Eliminar sucursal</h2>
+						<form action="eliminarDisco.php" method="POST">
+							<table>
+								<tr>
+									<td>Ingrese id sucursal que desee eliminar</td>
+									<td><input type="text" name="id_sucursal"></td>
+								</tr>
+								<tr>
+									<td><input type="submit" value="eliminar"></td>
+								</tr>
+							</table>
+						</form>
+						<hr>
+						<form action="actualizarSucursal.php" method="POST">
+							<h2>ACTUALIZAR SUCURSAL</h2>
+							<table>
+								<tr>
+									<td>Ingrese id sucursal que actualizar</td>
+									<td><input type="text" name="id_sucursal"></td>
+								</tr>
+							    <tr>
+								    <td>Ingrese id sucursal nueva</td>
+								    <td><input type="text" name="id_sucursal_nueva"></td>
+							    </tr>
+							    <tr>
+								    <td>Ingrese direccion nueva</td>
+							        <td><input type="text" name="direccion"></td>
+							    </tr>
+							    <tr>
+    							    <td>Ingrese fono nuevo</td>
+								    <td><input type="text" name="fono"></td>
+							    </tr>
+							    <tr>
+									<td>Ingrese email nuevo</td>
+									<td><input type="text" name="email"></td>
+								</tr>
+								<tr>
+									<td><input type="submit" value="Actualizar"></td>
+									<td><input type="reset" value="borrar"></td>
+								</tr>
+						</table>
+						</form>
+				</center>
 			<div class="fh5co-narrow-content">
 				<div class="row">
 					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">

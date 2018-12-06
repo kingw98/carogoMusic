@@ -74,9 +74,9 @@
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="sucursal.html">sucursal</a></li>
-					<li class="fh5co-active"><a href="Personal.html">Personal</a></li>
+					<li><a href="Personal.html">Personal</a></li>
 					<li><a href="discos.html">discos</a></li>
-					<li><a href="compañia.html">Compañia de discos</a></li>
+					<li class="fh5co-active"><a href="compañia.html">Compañia de discos</a></li>
 				</ul>
 			</nav>
 
@@ -92,22 +92,20 @@
 				
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Compañia Discografica</span></h2>
 				<center>
+					<h2>INGRESAR COMPAÑIA</h2>
 						<form action="./recibeCompañia.php" method="POST">
 							<table>
 								<tr>
-									<td><input type="text" name="id_personal" placeholder="Ingrese id personal" ></td>
+									<td><input type="text" name="id_compañia" placeholder="Ingrese id compañia" ></td>
 								</tr>
 								<tr>
 									<td><input type="text" name="id_sucursal" placeholder="ingrese id sucursal"></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="nombre" placeholder="ingrese nombre"></input></td>
+									<td><input type="text" name="nombre" placeholder="ingrese nombre compañia"></input></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="cargo" placeholder="ingrese cargo"></td>
-								</tr>
-								<tr>
-									<td><input type="text" name="clave" placeholder="ingrese clave de vendedor"></td>
+									<td><input type="text" name="email" placeholder="ingrese email compañia"></td>
 								</tr>
 								<tr>
 									<td><button type="submit">Enviar</button></td>
@@ -115,12 +113,57 @@
 								</tr>
 							</table>
 						</form>
-						<form action="./mostrarPersonal.php">
+						<hr>
+						<H2>MOSTRAR COMPAÑIAS DISCOGRAFICAS</H2>
+						<form action="./mostrarCompañia.php">
 							<table>
 								<tr>
 									<td><input type="submit" value="Mostrar"></td>
 								</tr>
 							</table>
+						</form>
+						<hr>
+						<H2>ELIMINAR COMPAÑIA DISCOGRAFICA</H2>
+						<form action="eliminarCompañia.php" method="POST">
+							<table>
+								<tr>
+									<td>Ingrese id personal que desee eliminar</td>
+									<td><input type="text" name="id_compañia"></td>
+								</tr>
+								<TR>
+										<TD><input type="submit" value="eliminar"></TD>
+									</TR>
+							</table>
+						</form>
+						<hr>
+						<form action="actualizarSucursal.php" method="POST">
+							<h2>ACTUALIZAR COMPAÑIA</h2>
+							<table>
+								<tr>
+									<td>Ingrese id compañia que actualizara</td>
+									<td><input type="text" name="id_compañia"></td>
+								</tr>
+							    <tr>
+								    <td>Ingrese id compaia nueva</td>
+								    <td><input type="text" name="id_compañia_nueva"></td>
+							    </tr>
+							    <tr>
+								    <td>Ingrese id sucursal nueva</td>
+							        <td><input type="text" name="id_sucursal"></td>
+							    </tr>
+							    <tr>
+    							    <td>Ingrese nombre nuevo</td>
+								    <td><input type="text" name="nombre"></td>
+							    </tr>
+							    <tr>
+									<td>Ingrese email nuevo</td>
+									<td><input type="text" name="email_compañia"></td>
+								</tr>
+								<tr>
+									<td><input type="submit" value="Actualizar"></td>
+									<td><input type="reset" value="borrar"></td>
+								</tr>
+						</table>
 						</form>
 				</center>
 			<div class="fh5co-narrow-content">

@@ -14,9 +14,6 @@
         <article>
             <?php
             $id_compañia = $_POST["id_compañia"];
-            $id_sucursal = $_POST["id_sucursal"];
-            $nombre = $_POST["nombre"];
-            $email = $_POST["email"];
             ?>
         </article>
         <article>
@@ -38,9 +35,9 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
-            $sql="insert into compañia_discografica values('".$id_compañia."','".$id_sucursal."','".$nombre."','".$email."');";
+            $sql="delete from compañia_discografica where id_compañia = '".$id_compañia."';";
             if($conexion -> query($sql) == true){
-                echo "datos ingresados correctamente";
+                echo "datos eliminados correctamente";
             }else{
                 echo "Error: ".$sql." ".$conexion -> connect_error;
             }

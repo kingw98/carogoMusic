@@ -2,7 +2,10 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+
+
+<html class="no-js"> <!--<![endif]-->
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,10 +75,11 @@
 			<h1 id="fh5co-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li class="fh5co-active"><a href="portfolio.html">Portfolio</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">Contact</a></li>
+					<li class="fh5co-active"><a href="sucursal.html">sucursal</a></li>
+					<li><a href="Personal.html">Personal</a></li>
+					<li><a href="discos.html">discos</a></li>
+					<li><a href="compañia.html">Compañia de discos</a></li>
+					<li><a href=""></a></li>
 				</ul>
 			</nav>
 
@@ -88,61 +92,40 @@
 		<div id="fh5co-main">
 
 			<div class="fh5co-narrow-content">
-				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Compañia Discografica</span></h2>
-				<div class="row animate-box" data-animate-effect="fadeInLeft">
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="work.html">
-							<img src="images/work_1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-							<h3 class="fh5co-work-title">Ingreso de datos Compañia discofgrafica</h3>
-							<p>Illustration, Branding</p>
-						</a>
-					</div>
-					<center>
-					<section>
-						<article>
-							<form action="recibe.php" method="post">
-								<input type="text" name="nombre" placeholder="ingrese id personal"><br>
-								<input type="text" name="apellido" placeholder="ingrese id secursal"><br>
-								<input type="text" name="edad" placeholder="ingrese nombre personal"><br>
-								<input type="text" name="correo" placeholder="clave"><br>
 				
-								<input type="radio" name="genero" value="Gerente">Gerente<br>
-                                <input type="radio" name="genero" value="Vendedor">Vendedor<br>
-                                <input type="radio" name="genero" value="Auxiliar">Auxiliar<br>
-								<input type="radio" name="genero" value="Bodeguero">Bodeguero<br>
-
-				
-								<button type="submit">Enviar</button>
-								<button type="reset">Limpiar</button>
-							</form>
-						</article>
-					</section>
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Sucursal</span></h2>
+				<center>
+                        <H2>MOSTRAR dos tablas</H2>
+						<form action="./consultaDosTablas.php">
+							<table>
+								<tr>
+									<td><input type="submit" value="Mostrar"></td>
+								</tr>
+							</table>
+						</form>
 				</center>
-					
-				</div>
-			</div>
-		
-
 			<div class="fh5co-narrow-content">
 				<div class="row">
 					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<h1 class="fh5co-heading-colored">Start Your Project Now!</h1>
+						<h1 class="fh5co-heading-colored">¿Qué desea hacer?</h1>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						<p><a href="#" class="btn btn-primary btn-outline">Get Started</a></p>
+						<p class="fh5co-lead">Insertar datos.</p>
+						<p><a href="ingsuc.html" class="btn btn-primary btn-outline">Ir</a></p>
 					</div>
-					<div class="col-md-7 col-md-push-1">
-						<div class="row">
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-							<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-								<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-							</div>
-						</div>
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">Actualizar datos.</p>
+						<p><a href="actsuc.html" class="btn btn-primary btn-outline">Ir</a></p>
+					</div>	
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">Eliminar datos.</p>
+						<p><a href="elimsuc.html" class="btn btn-primary btn-outline">Ir</a></p>
+					</div>
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">Mostrar datos.</p>
+						<p><a href="mostrarsuc.html" class="btn btn-primary btn-outline">Ir</a></p>
 					</div>
 				</div>
 			</div>
@@ -166,14 +149,9 @@
 	<script src="js/jquery.countTo.js"></script>
 	
 	
-	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 
 
-
-	
-
 	</body>
 </html>
-

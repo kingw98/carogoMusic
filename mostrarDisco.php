@@ -8,19 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Recibe datos</h1>
+        <h1>Mostrar Datos</h1>
     </header>
     <section>
         <article>
-            <?php
-            $id_compañia = $_POST["id_compañia"];
-            $id_sucursal = $_POST["id_sucursal"];
-            $nombre = $_POST["nombre"];
-            $email = $_POST["email"];
-            ?>
-        </article>
-        <article>
-            <h2>Conexión</h2>
             <?php
             $servidor = "localhost";
             $usuario = "root";
@@ -33,18 +24,18 @@
                 die("conexión fallida".$conexion -> connect_error);
             }
             echo "conexión realizada con exito";
-            ?>
-        </article>
-        <article>
-            <h2>Ingresar datos</h2>
-            <?php
-            $sql="insert into compañia_discografica values('".$id_compañia."','".$id_sucursal."','".$nombre."','".$email."');";
-            if($conexion -> query($sql) == true){
-                echo "datos ingresados correctamente";
+            echo "<br>";
+
+            $sql = "select id_disco,id_sucursal,id_compañia,nombre_disco,artista from disco;";
+            $resultados = $conexion -> query($sql);
+
+            if($resultados -> num_rows > 0){
+                while($row = $resultados -> fetch_assoc()){
+                    echo "ID DISCO: ".$row["id_disco"].", ID SUCURSAL: ".$row["id_sucursal"].", ID_COMPAÑIA: ".$row["id_compañia"].", NOMBRE_DISCO: ".$row["nombre_disco"].", ARTISTA: ".$row["artista"]."<br>";
+                }
             }else{
-                echo "Error: ".$sql." ".$conexion -> connect_error;
+                echo "no hay datos";
             }
-            $conexion -> close();
             ?>
         </article>
     </section>

@@ -74,8 +74,8 @@
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="sucursal.html">sucursal</a></li>
-					<li class="fh5co-active"><a href="Personal.html">Personal</a></li>
-					<li><a href="discos.html">discos</a></li>
+					<li><a href="Personal.html">Personal</a></li>
+					<li class="fh5co-active"><a href="discos.html">discos</a></li>
 					<li><a href="compañia.html">Compañia de discos</a></li>
 				</ul>
 			</nav>
@@ -92,24 +92,50 @@
 				
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Discos</span></h2>
 				<center>
-						<form action="./recibeSucursal.php" method="POST">
+					<H2>INGRESAR DISCOS</H2>
+						<form action="./recibeDisco.php" method="POST">
 							<table>
 								<tr>
-									<td><input type="text" name="id" placeholder="Ingrese id sucursal" ></td>
+									<td><input type="text" name="id_disco" placeholder="Ingrese id disco" ></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="direccion" placeholder="ingrese direccion sucursal"></td>
+									<td><input type="text" name="id_sucursal" placeholder="ingrese id sucursal"></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="fono" placeholder="ingrese telefono"></input></td>
+									<td><input type="text" name="id_compañia" placeholder="ingrese id compañia"></input></td>
 								</tr>
 								<tr>
-									<td><input type="text" name="email" placeholder="ingrese email"></td>
+									<td><input type="text" name="nombre_disco" placeholder="ingrese nombre disco"></td>
 								</tr>
+							    <tr>
+								    <td><input type="text" name="artista" placeholder="ingrese artista"></td>
+							    </tr>
 								<tr>
 									<td><button type="submit">Enviar</button></td>
 									<td><button type="reset">Borrar</button></td>
 								</tr>
+							</table>
+						</form>
+						<hr>
+						<H2>MOSTRAR DISCOS</H2>
+						<form action="./mostrarDisco.php">
+							<table>
+								<tr>
+									<td><input type="submit" value="Mostrar"></td>
+								</tr>
+							</table>
+						</form>
+						<hr>
+						<H2>ELIMINAR DISCO</H2>
+						<form action="eliminarDisco.php" method="POST">
+							<table>
+								<tr>
+									<td>Ingrese id dsico que desee eliminar</td>
+									<td><input type="text" name="id_disco"></td>
+								</tr>
+								<TR>
+										<TD><input type="submit" value="eliminar"></TD>
+									</TR>
 							</table>
 						</form>
 				</center>

@@ -13,10 +13,11 @@
     <section>
         <article>
             <?php
-            $id_compañia = $_POST["id_compañia"];
-            $id_sucursal = $_POST["id_sucursal"];
-            $nombre = $_POST["nombre"];
-            $email = $_POST["email"];
+            $id = $_POST["id_sucursal"];
+            $id_sucursal_nueva = $_POST["id_sucursal_nueva"];
+            $direccion = $_POST["direccion"];
+            $fono = $_POST["fono"];
+            $email = $_POST["email"]
             ?>
         </article>
         <article>
@@ -38,9 +39,9 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
-            $sql="insert into compañia_discografica values('".$id_compañia."','".$id_sucursal."','".$nombre."','".$email."');";
+            $sql="update sucursal set id_sucursal = '".$id_sucursal_nueva."', direccion = '".$direccion."', fono = '".$fono."', email = '".$email."' where id_sucursal = '".$id."';";
             if($conexion -> query($sql) == true){
-                echo "datos ingresados correctamente";
+                echo "datos actualizados correctamente";
             }else{
                 echo "Error: ".$sql." ".$conexion -> connect_error;
             }

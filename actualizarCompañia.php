@@ -14,9 +14,10 @@
         <article>
             <?php
             $id_compañia = $_POST["id_compañia"];
+            $id_compañia_nueva = $_POST["id_compañia_nueva"];
             $id_sucursal = $_POST["id_sucursal"];
             $nombre = $_POST["nombre"];
-            $email = $_POST["email"];
+            $email_compañia = $_POST["email_compañia"]
             ?>
         </article>
         <article>
@@ -38,9 +39,9 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
-            $sql="insert into compañia_discografica values('".$id_compañia."','".$id_sucursal."','".$nombre."','".$email."');";
+            $sql="update compañia set id_compañia = '".$id_compañia_nueva."', id_sucursal = '".$id_sucursal."', nombre = '".$nombre."', email_compañia = '".$email_compañia."' where id_sucursal = '".$id_compañia_nueva."';";
             if($conexion -> query($sql) == true){
-                echo "datos ingresados correctamente";
+                echo "datos actualizados correctamente";
             }else{
                 echo "Error: ".$sql." ".$conexion -> connect_error;
             }
