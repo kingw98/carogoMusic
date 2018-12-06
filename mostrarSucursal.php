@@ -8,19 +8,10 @@
 </head>
 <body>
     <header>
-        <h1>Recibe datos</h1>
+        <h1>Mostrar Datos</h1>
     </header>
     <section>
         <article>
-            <?php
-            $id = $_POST["id"];
-            $direccion = $_POST["direccion"];
-            $fono = $_POST["fono"];
-            $email = $_POST["email"]
-            ?>
-        </article>
-        <article>
-            <h2>Conexión</h2>
             <?php
             $servidor = "localhost";
             $usuario = "root";
@@ -33,18 +24,18 @@
                 die("conexión fallida".$conexion -> connect_error);
             }
             echo "conexión realizada con exito";
-            ?>
-        </article>
-        <article>
-            <h2>Ingresar datos</h2>
-            <?php
-            $sql="insert into sucursal values('".$id."','".$direccion."','".$fono."','".$email."');";
-            if($conexion -> query($sql) == true){
-                echo "datos ingresados correctamente";
+            echo "<br>";
+
+            $sql = "select id_sucursal,direccion,fono,email from personal";
+            $resultados = $conexion -> query($sql);
+
+            if($resultados -> num_rows > 0){
+                while($row = $resultados -> fetch_assoc()){
+                    echo "ID: ".$row["id"].", DIRECCION: ".$row["direccion"].", FONO: ".$row["fono"].", EMAIL: ".$row["email"]."<br>";
+                }
             }else{
-                echo "Error: ".$sql." ".$conexion -> connect_error;
+                echo "no hay datos";
             }
-            $conexion -> close();
             ?>
         </article>
     </section>
