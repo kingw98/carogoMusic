@@ -8,10 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>Mostrar Datos</h1>
+        <h1>Recibe datos</h1>
     </header>
     <section>
         <article>
+            <?php
+            $id_personal = $_POST["id_personal"];
+            $id_sucursal = $_POST["id_sucursal"];
+            $nombre = $_POST["nombre"];
+            $cargo = $_POST["cargo"];
+            $clave = $_POST["clave"];
+            ?>
+        </article>
+        <article>
+            <h2>Conexión</h2>
             <?php
             $servidor = "localhost";
             $usuario = "root";
@@ -24,18 +34,18 @@
                 die("conexión fallida".$conexion -> connect_error);
             }
             echo "conexión realizada con exito";
-            echo "<br>";
-
-            $sql = "select id_sucursal,direccion,fono,email from sucursal;";
-            $resultados = $conexion -> query($sql);
-
-            if($resultados -> num_rows > 0){
-                while($row = $resultados -> fetch_assoc()){
-                    echo "ID: ".$row["id_sucursal"].", DIRECCION: ".$row["direccion"].", FONO: ".$row["fono"].", EMAIL: ".$row["email"]."<br>";
-                }
+            ?>
+        </article>
+        <article>
+            <h2>Ingresar datos</h2>
+            <?php
+            $sql="insert into personal values('".$id_personal."','".$id_sucursal."','".$nombre."','".$cargo."','".$clave."');";
+            if($conexion -> query($sql) == true){
+                echo "datos ingresados correctamente";
             }else{
-                echo "no hay datos";
+                echo "Error: ".$sql." ".$conexion -> connect_error;
             }
+            $conexion -> close();
             ?>
         </article>
     </section>

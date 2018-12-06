@@ -92,16 +92,37 @@
 				
 				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Compañia Discografica</span></h2>
 				<center>
-				<div class="row animate-box" data-animate-effect="fadeInLeft">
-					<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 work-item">
-						<a href="work.html">
-							<img src="images/work_1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
-							<h3 class="fh5co-work-title">Ingreso de datos Compañia discofgrafica</h3>
-							<p>Illustration, Branding</p>
-						</a>
-					</div>
-			</div>
-</center>
+						<form action="./recibeCompañia.php" method="POST">
+							<table>
+								<tr>
+									<td><input type="text" name="id_personal" placeholder="Ingrese id personal" ></td>
+								</tr>
+								<tr>
+									<td><input type="text" name="id_sucursal" placeholder="ingrese id sucursal"></td>
+								</tr>
+								<tr>
+									<td><input type="text" name="nombre" placeholder="ingrese nombre"></input></td>
+								</tr>
+								<tr>
+									<td><input type="text" name="cargo" placeholder="ingrese cargo"></td>
+								</tr>
+								<tr>
+									<td><input type="text" name="clave" placeholder="ingrese clave de vendedor"></td>
+								</tr>
+								<tr>
+									<td><button type="submit">Enviar</button></td>
+									<td><button type="reset">Borrar</button></td>
+								</tr>
+							</table>
+						</form>
+						<form action="./mostrarPersonal.php">
+							<table>
+								<tr>
+									<td><input type="submit" value="Mostrar"></td>
+								</tr>
+							</table>
+						</form>
+				</center>
 			<div class="fh5co-narrow-content">
 				<div class="row">
 					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">

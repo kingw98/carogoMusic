@@ -26,12 +26,12 @@
             echo "conexión realizada con exito";
             echo "<br>";
 
-            $sql = "select id_sucursal,direccion,fono,email from sucursal;";
+            $sql = "select id_personal,id_sucursal,nombre,cargo,clave from personal;";
             $resultados = $conexion -> query($sql);
 
             if($resultados -> num_rows > 0){
                 while($row = $resultados -> fetch_assoc()){
-                    echo "ID: ".$row["id_sucursal"].", DIRECCION: ".$row["direccion"].", FONO: ".$row["fono"].", EMAIL: ".$row["email"]."<br>";
+                    echo "ID PERSONAL: ".$row["id_personal"].", ID SUCURSAL: ".$row["id_sucursal"].", NOMBRE: ".$row["nombre"].", CARGO: ".$row["cargo"].", CLAVE: ".$row["clave"]."<br>";
                 }
             }else{
                 echo "no hay datos";
