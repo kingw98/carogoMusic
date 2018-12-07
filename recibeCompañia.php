@@ -13,9 +13,10 @@
     <section>
         <article>
             <?php
+            ini_set('diplay_errors',0);
             $id_compañia = $_POST["id_compañia"];
             $id_sucursal = $_POST["id_sucursal"];
-            $nombre = $_POST["nombre"];
+            $nombre = $_POST['nombre1'].'-'.$_POST['nombre2'].'-'.$_POST['nombre3'].'-'.$_POST['nombre4'];
             $email = $_POST["email"];
             ?>
         </article>
@@ -38,6 +39,10 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
+            if(isset($_POST['nombre'])){
+                $nombre=implode('-', $_POST['nombre']);
+            }
+
             $sql="insert into compañia_discografica values('".$id_compañia."','".$id_sucursal."','".$nombre."','".$email."');";
             if($conexion -> query($sql) == true){
                 echo "datos ingresados correctamente";

@@ -26,12 +26,12 @@
             echo "conexión realizada con exito";
             echo "<br>";
 
-            $sql = "select id_disco,id_sucursal,id_compañia,nombre_disco,artista from disco;";
+            $sql = "select id_disco,id_sucursal,id_compañia,nombre_disco,artista,canciones from disco;";
             $resultados = $conexion -> query($sql);
 
             if($resultados -> num_rows > 0){
                 while($row = $resultados -> fetch_assoc()){
-                    echo "ID DISCO: ".$row["id_disco"].", ID SUCURSAL: ".$row["id_sucursal"].", ID_COMPAÑIA: ".$row["id_compañia"].", NOMBRE_DISCO: ".$row["nombre_disco"].", ARTISTA: ".$row["artista"]."<br>";
+                    echo "ID DISCO: ".$row["id_disco"].", ID SUCURSAL: ".$row["id_sucursal"].", ID_COMPAÑIA: ".$row["id_compañia"].", NOMBRE_DISCO: ".$row["nombre_disco"].", ARTISTA: ".$row["artista"].", ARTISTA: ".$row["canciones"]."<br>";
                 }
             }else{
                 echo "no hay datos";

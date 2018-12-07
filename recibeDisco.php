@@ -18,6 +18,7 @@
             $id_compañia = $_POST["id_compañia"];
             $nombre_disco = $_POST["nombre_disco"];
             $artista = $_POST["artista"];
+            $texto = $_POST["texto"];
             ?>
         </article>
         <article>
@@ -39,7 +40,7 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
-            $sql="insert into disco values('".$id_disco."','".$id_sucursal."','".$id_compañia."','".$nombre_disco."','".$artista."');";
+            $sql="insert into disco values('".$id_disco."','".$id_sucursal."','".$id_compañia."','".$nombre_disco."','".$artista."','".$texto."');";
             if($conexion -> query($sql) == true){
                 echo "datos ingresados correctamente";
             }else{
