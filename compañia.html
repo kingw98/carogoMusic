@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Nitro &mdash; Free HTML5 Bootstrap Website Template by FreeHTML5.co</title>
+	<title>carogoMusic</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -63,6 +63,8 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<link rel="icon" href="./favicon.ico" type="image/icon">
+
 	</head>
 	<body>
 
@@ -70,13 +72,13 @@
 		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
+			<h1 id="fh5co-logo"><img src="./logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
 			<nav id="fh5co-main-menu" role="navigation">
 				<ul>
 					<li><a href="sucursal.html">sucursal</a></li>
 					<li><a href="Personal.html">Personal</a></li>
-					<li><a href="discos.html">discos</a></li>
-					<li class="fh5co-active"><a href="compañia.html">Compañia de discos</a></li>
+					<li class="fh5co-active"><a href="discos.html">discos</a></li>
+					<li><a href="compañia.html">Compañia de discos</a></li>
 				</ul>
 			</nav>
 
@@ -136,7 +138,7 @@
 							</table>
 						</form>
 						<hr>
-						<form action="actualizarSucursal.php" method="POST">
+						<form action="actualizarCompañia.php" method="POST">
 							<h2>ACTUALIZAR COMPAÑIA</h2>
 							<table>
 								<tr>
@@ -144,11 +146,11 @@
 									<td><input type="text" name="id_compañia"></td>
 								</tr>
 							    <tr>
-								    <td>Ingrese id compaia nueva</td>
+								    <td>Ingrese id compañia nueva</td>
 								    <td><input type="text" name="id_compañia_nueva"></td>
 							    </tr>
 							    <tr>
-								    <td>Ingrese id sucursal nueva</td>
+								    <td>Ingrese id sucursal </td>
 							        <td><input type="text" name="id_sucursal"></td>
 							    </tr>
 							    <tr>
@@ -166,31 +168,7 @@
 						</table>
 						</form>
 				</center>
-			<div class="fh5co-narrow-content">
-				<div class="row">
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<h1 class="fh5co-heading-colored">¿Qué desea hacer?</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Insertar datos.</p>
-						<p><a href="ingresocom.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Actualizar datos.</p>
-						<p><a href="actcom.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>	
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Eliminar datos.</p>
-						<p><a href="elimcom.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Mostrar datos.</p>
-						<p><a href="mostrarcomp.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>
-				</div>
-			</div>
+			
 
 		</div>
 	</div>

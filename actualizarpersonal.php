@@ -7,18 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
     <header>
         <h1>Recibe datos</h1>
     </header>
     <section>
         <article>
             <?php
-            $id_compañia = $_POST["id_compañia"];
-            $id_compañia_nueva = $_POST["id_compañia_nueva"];
+            $id_personal = $_POST["id_personal"];
+            $id_personal_nuevo= $_POST["id_personal_nuevo"];
             $id_sucursal = $_POST["id_sucursal"];
             $nombre = $_POST["nombre"];
-            $email_compañia = $_POST["email_compañia"]
+            $cargo = $_POST["cargo"];
+            $clave = $_POST["clave"];
             ?>
         </article>
         <article>
@@ -40,7 +40,7 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
-            $sql="update compañia_discografica set id_compañia = '".$id_compañia_nueva."', id_sucursal = '".$id_sucursal."', nombre = '".$nombre."', email_compañia = '".$email_compañia."' where id_compañia = '".$id_compañia."';";
+           $sql = "update personal set id_personal='".$id_personal_nuevo."',nombre='".$nombre."',cargo='".$cargo."',clave=".$clave." where id_personal='".$id_personal."';";
             if($conexion -> query($sql) == true){
                 echo "datos actualizados correctamente";
             }else{

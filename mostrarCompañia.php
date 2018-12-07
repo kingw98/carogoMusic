@@ -26,7 +26,7 @@
             echo "conexión realizada con exito";
             echo "<br>";
 
-            $sql = "select id_compañia,id_sucursal,nombre,email_compañia compañia_discografica;";
+            $sql = "select id_compañia,id_sucursal,nombre,email_compañia from compañia_discografica;";
             $resultados = $conexion -> query($sql);
 
             if($resultados -> num_rows > 0){

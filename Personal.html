@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Nitro &mdash; Free HTML5 Bootstrap Website Template by FreeHTML5.co</title>
+	<title>carogoMusic</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -63,22 +63,24 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
+	<link rel="icon" href="./favicon.ico" type="image/icon">
 
-	<div id="fh5co-page">
-		<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-		<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+</head>
+<body>
 
-			<h1 id="fh5co-logo"><a href="index.html"><img src="images/logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
-			<nav id="fh5co-main-menu" role="navigation">
-				<ul>
-					<li><a href="sucursal.html">sucursal</a></li>
-					<li class="fh5co-active"><a href="Personal.html">Personal</a></li>
-					<li><a href="discos.html">discos</a></li>
-					<li><a href="compañia.html">Compañia de discos</a></li>
-				</ul>
-			</nav>
+<div id="fh5co-page">
+	<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+	<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+		<h1 id="fh5co-logo"><img src="./logo.png" alt="Free HTML5 Bootstrap Website Template"></a></h1>
+		<nav id="fh5co-main-menu" role="navigation">
+			<ul>
+				<li><a href="sucursal.html">sucursal</a></li>
+				<li><a href="Personal.html">Personal</a></li>
+				<li class="fh5co-active"><a href="discos.html">discos</a></li>
+				<li><a href="compañia.html">Compañia de discos</a></li>
+			</ul>
+		</nav>
 
 			<div class="fh5co-footer">
 				
@@ -139,31 +141,40 @@
 							</table>
 						</form>
 				</center>
-			<div class="fh5co-narrow-content">
-				<div class="row">
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<h1 class="fh5co-heading-colored">¿Qué desea hacer?</h1>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Insertar datos.</p>
-						<p><a href="ingresopersonal.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Actualizar datos.</p>
-						<p><a href="actpersonal.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>	
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Eliminar datos.</p>
-						<p><a href="elimpersonal.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>
-					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-						<p class="fh5co-lead">Mostrar datos.</p>
-						<p><a href="mostrarpersonal.html" class="btn btn-primary btn-outline">Ir</a></p>
-					</div>
-				</div>
-			</div>
+				<form action="actualizarpersonal.php" method="POST">
+					<h2>ACTUALIZAR personal</h2>
+					<table>
+						<tr>
+							<td>Ingrese id personal</td>
+							<td><input type="text" name="id_personal"></td>
+						</tr>
+						<tr>
+							<td>Ingrese id personal nuevo</td>
+							<td><input type="text" name="id_personal_nuevo"></td>
+						</tr>
+						<tr>
+							<td>Ingrese id sucursal</td>
+							<td><input type="text" name="id_sucursal"></td>
+						</tr>
+						<tr>
+							<td>Ingrese nombre nuevo</td>
+							<td><input type="text" name="nombre"></td>
+						</tr>
+						<tr>
+							<td>Ingrese cargo nuevo</td>
+							<td><input type="text" name="cargo"></td>
+						</tr>
+						<tr>
+							<td>Ingrese clave nueva</td>
+							<td><input type="text" name="clave"></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="Actualizar"></td>
+							<td><input type="reset" value="borrar"></td>
+						</tr>
+				</table>
+				</form>
+		
 
 		</div>
 	</div>

@@ -7,18 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
     <header>
         <h1>Recibe datos</h1>
     </header>
     <section>
         <article>
             <?php
-            $id_compañia = $_POST["id_compañia"];
-            $id_compañia_nueva = $_POST["id_compañia_nueva"];
+            $id_disco = $_POST["id_disco"];
+            $id_disco_nuevo = $_POST["id_disco_nuevo"];
             $id_sucursal = $_POST["id_sucursal"];
-            $nombre = $_POST["nombre"];
-            $email_compañia = $_POST["email_compañia"]
+            $id_compañia = $_POST["id_compañia"];
+            $nombre_disco = $_POST["nombre_disco"];
+            $artista = $_POST["artista"];
             ?>
         </article>
         <article>
@@ -40,9 +40,9 @@
         <article>
             <h2>Ingresar datos</h2>
             <?php
-            $sql="update compañia_discografica set id_compañia = '".$id_compañia_nueva."', id_sucursal = '".$id_sucursal."', nombre = '".$nombre."', email_compañia = '".$email_compañia."' where id_compañia = '".$id_compañia."';";
+             $sql = "update disco set id_disco='".$id_disco_nuevo."',id_sucursal='".$id_sucursal."',id_compañia='".$id_compañia."',nombre_disco='".$nombre_disco."',artista='".$artista."' where id_disco='".$id_disco."';";
             if($conexion -> query($sql) == true){
-                echo "datos actualizados correctamente";
+                echo "datos ingresados correctamente";
             }else{
                 echo "Error: ".$sql." ".$conexion -> connect_error;
             }
