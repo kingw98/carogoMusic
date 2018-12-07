@@ -1,0 +1,6 @@
+
+drop database login;
+create database login;
+use login;
+create table usuarios(nombre varchar(20),pass varchar(20));
+insert into usuarios value ("admin",12345);
