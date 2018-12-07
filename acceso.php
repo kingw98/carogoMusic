@@ -20,7 +20,7 @@
             $usuario = "root";
             $password = "root";
 
-            $nombreBD="login";
+            $nombreBD="carogoMusic";
             #se crea la conexion
             $conexion = new mysqli($servidor,$usuario,$password,$nombreBD);
             #chequeo la conexion
